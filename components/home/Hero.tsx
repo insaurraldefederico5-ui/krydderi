@@ -1,6 +1,5 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { FallingSpices } from "./FallingSpices";
 
 export function Hero() {
   const t = useTranslations("home.hero");
@@ -131,19 +130,27 @@ export function Hero() {
           </p>
         </div>
 
-        {/* ── RIGHT: falling spices ──────────────────────────────────── */}
-        <div className="lg:w-[42%] relative min-h-[55vh] lg:min-h-screen">
-          {/* Warm glow in the lower half */}
-          <div
+        {/* ── RIGHT: video ──────────────────────────────────── */}
+        <div className="hidden lg:block lg:w-[42%] relative" style={{ minHeight: "100vh" }}>
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            aria-hidden="true"
             style={{
               position: "absolute",
-              bottom: 0, left: "10%",
-              width: "80%", height: "55%",
-              background: "radial-gradient(ellipse at 50% 90%, rgba(181,116,34,0.07) 0%, transparent 65%)",
-              pointerEvents: "none",
+              inset: 0,
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              objectPosition: "center",
+              WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 18%)",
+              maskImage: "linear-gradient(to right, transparent 0%, black 18%)",
             }}
-          />
-          <FallingSpices />
+          >
+            <source src="/video/spices.mp4" type="video/mp4" />
+          </video>
         </div>
       </div>
 

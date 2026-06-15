@@ -10,13 +10,10 @@ import { TrustBadges }     from "@/components/home/TrustBadges";
 import { LeadForm }        from "@/components/home/LeadForm";
 import { SiteFooter }      from "@/components/home/SiteFooter";
 import { ScrollRevealInit } from "@/components/home/ScrollReveal";
-import { StickySpices }    from "@/components/home/StickySpices";
-
 export default function HomePage() {
   return (
     <>
       <ScrollRevealInit />
-      <StickySpices />
       <Navbar />
       <Hero />
       <Marquee />
