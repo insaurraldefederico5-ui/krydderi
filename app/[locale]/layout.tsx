@@ -21,11 +21,11 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "Krydderi — Krydderier direkte fra oprindelsen",
+    default: "Krydderi — Spices direct from origin",
     template: "%s | Krydderi",
   },
   description:
-    "Certificerede krydderier direkte fra kilden. Leveret til professionelle køkkener i København på 48 timer.",
+    "Certified spices direct from source. Delivered to professional kitchens in Copenhagen in 48 hours.",
 };
 
 export default async function LocaleLayout({

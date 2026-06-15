@@ -6,57 +6,62 @@ import { routing } from "@/i18n/routing";
 const intlMiddleware = createIntlMiddleware(routing);
 
 export async function proxy(request: NextRequest) {
-  // Run next-intl first so locale is set on the request
+  // Run next-intl first. It sets X-NEXT-INTL-LOCALE on the request headers
+  // via the x-middleware-request-* mechanism. We MUST return this response
+  // directly (not create a new NextResponse.next()) so those request-header
+  // modifications reach getRequestConfig and all server components.
   const intlResponse = intlMiddleware(request);
 
-  // If next-intl wants to redirect (e.g. /path → /da/path), honour it
+  // If next-intl wants to redirect (e.g. / → /da), honour it immediately.
   if (intlResponse.status !== 200) {
     return intlResponse;
   }
 
-  // Build a response that inherits next-intl's headers (x-default-locale etc.)
-  let response = NextResponse.next({
-    request,
-    headers: intlResponse.headers,
-  });
-
-  // Refresh the Supabase session token so it doesn't expire mid-session.
-  // Skip if env vars aren't configured yet (e.g. before Supabase project is linked).
-  if (process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
-    const supabase = createServerClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL,
-      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
-      {
-        cookies: {
-          getAll() {
-            return request.cookies.getAll();
-          },
-          setAll(cookiesToSet) {
-            cookiesToSet.forEach(({ name, value }) =>
-              request.cookies.set(name, value)
-            );
-            response = NextResponse.next({
-              request,
-              headers: intlResponse.headers,
-            });
-            cookiesToSet.forEach(({ name, value, options }) =>
-              response.cookies.set(name, value, options)
-            );
-          },
-        },
-      }
-    );
-
-    // Must call getUser() to trigger session refresh — do not remove
-    await supabase.auth.getUser();
+  // Supabase: refresh the session cookie on the EXISTING intlResponse so we
+  // don't lose the locale headers that next-intl already set.
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+    return intlResponse;
   }
+
+  let response = intlResponse;
+
+  const supabase = createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+    {
+      cookies: {
+        getAll() {
+          return request.cookies.getAll();
+        },
+        setAll(cookiesToSet) {
+          cookiesToSet.forEach(({ name, value }) =>
+            request.cookies.set(name, value)
+          );
+          // Rebuild response preserving all existing headers from intlResponse
+          const newResponse = NextResponse.next({
+            request,
+            headers: intlResponse.headers,
+          });
+          // Copy any intlResponse cookies too
+          intlResponse.cookies.getAll().forEach(({ name, value }) => {
+            newResponse.cookies.set(name, value);
+          });
+          cookiesToSet.forEach(({ name, value, options }) =>
+            newResponse.cookies.set(name, value, options)
+          );
+          response = newResponse;
+        },
+      },
+    }
+  );
+
+  await supabase.auth.getUser();
 
   return response;
 }
 
 export const config = {
   matcher: [
-    // Skip Next.js internals and static files
     "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
   ],
 };
