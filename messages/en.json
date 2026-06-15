@@ -1,0 +1,124 @@
+{
+  "nav": {
+    "range": "Range",
+    "about": "About",
+    "contact": "Contact",
+    "login": "Log in",
+    "requestAccount": "Request account"
+  },
+  "home": {
+    "hero": {
+      "headline": "Spices direct from origin. Delivered in Copenhagen.",
+      "subhead": "Same certified quality as your current supplier — better price, full traceability, 48-hour delivery.",
+      "ctaLogin": "Log in to your account",
+      "ctaRequest": "Request an account"
+    },
+    "valueProps": {
+      "title": "Why Krydderi?",
+      "direct": {
+        "title": "Direct from source",
+        "description": "We cut out the German and Dutch middleman. Cardamom from Guatemala, turmeric from India — bought directly from co-ops with traceable certificates."
+      },
+      "certified": {
+        "title": "Certified & traceable",
+        "description": "EU Organic, Fairtrade, Kosher — and a Certificate of Analysis with every batch. Not just words on a bag."
+      },
+      "reliable": {
+        "title": "Reliable Copenhagen logistics",
+        "description": "48-hour delivery on stocked items. One supplier for your entire spice portfolio. We know your operation."
+      }
+    },
+    "howItWorks": {
+      "title": "How it works",
+      "step1": { "title": "Request an account", "description": "Fill in the form below. We'll be in touch within one business day." },
+      "step2": { "title": "We set your pricing", "description": "Based on your volume and range, we negotiate a price that beats your current supplier." },
+      "step3": { "title": "Order online — always", "description": "Log in from phone or computer and reorder in under 30 seconds." }
+    },
+    "range": {
+      "title": "Our range"
+    },
+    "categories": {
+      "whole_spices": "Whole Spices",
+      "ground_spices": "Ground Spices",
+      "herbs": "Herbs",
+      "blends": "Blends",
+      "organic": "Organic"
+    },
+    "trust": {
+      "certified": "EU certified",
+      "labTested": "Lab-tested every batch",
+      "origin": "Traceable origin"
+    },
+    "whoFor": {
+      "title": "For professional kitchens",
+      "bakeries": "Bakeries",
+      "restaurants": "Restaurants",
+      "manufacturers": "Food manufacturers",
+      "healthFood": "Health-food brands"
+    },
+    "lead": {
+      "title": "Request an account",
+      "subtitle": "Tell us a little about your business. We'll get back to you within one business day.",
+      "businessName": "Business name",
+      "contactName": "Contact person",
+      "email": "Email",
+      "phone": "Phone",
+      "segment": "Business type",
+      "message": "What do you buy today? (approx. volume and products)",
+      "submit": "Send request",
+      "success": "Thank you! We'll be in touch within one business day.",
+      "segments": {
+        "bakery": "Bakery / Pastry",
+        "restaurant": "Restaurant / Catering",
+        "manufacturer": "Food manufacturer",
+        "health_food": "Health food",
+        "distributor": "Distributor"
+      }
+    },
+    "footer": {
+      "tagline": "Certified spices direct to the professional kitchen.",
+      "privacy": "Privacy policy",
+      "terms": "Terms",
+      "gdpr": "GDPR"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Log in",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Log in",
+      "forgotPassword": "Forgot password?",
+      "magicLink": "Send magic link",
+      "orContinueWith": "or continue with"
+    },
+    "errors": {
+      "invalidCredentials": "Invalid email or password.",
+      "emailRequired": "Please enter your email.",
+      "passwordRequired": "Please enter your password."
+    }
+  },
+  "dashboard": {
+    "greeting": "Hello, {name}",
+    "reorderLast": "Reorder last order",
+    "myUsuals": "My usuals",
+    "spendThisMonth": "Spend this month",
+    "nextDelivery": "Next delivery"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong. Please try again.",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "exVat": "ex. VAT",
+    "incVat": "inc. VAT",
+    "vat": "VAT (25%)",
+    "perKg": "per kg",
+    "kg": "kg",
+    "currency": "kr."
+  }
+}

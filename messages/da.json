@@ -1,0 +1,124 @@
+{
+  "nav": {
+    "range": "Sortiment",
+    "about": "Om os",
+    "contact": "Kontakt",
+    "login": "Log ind",
+    "requestAccount": "Anmod om konto"
+  },
+  "home": {
+    "hero": {
+      "headline": "Krydderier direkte fra oprindelsen. Leveret i København.",
+      "subhead": "Samme certificerede kvalitet som din nuværende leverandør — bedre pris, fuld sporbarhed, 48-timers levering.",
+      "ctaLogin": "Log ind på din konto",
+      "ctaRequest": "Anmod om konto"
+    },
+    "valueProps": {
+      "title": "Hvorfor Krydderi?",
+      "direct": {
+        "title": "Direkte fra kilden",
+        "description": "Vi skærer den tyske og hollandske mellemhandel fra. Cardamom fra Guatemala, gurkemeje fra Indien — købt direkte fra kooperativer med sporbare certifikater."
+      },
+      "certified": {
+        "title": "Certificeret & sporbar",
+        "description": "EU-Økologi, Fairtrade, Kosher — og et laboratorieanalysecertifikat med hvert parti. Ikke bare ord på en pose."
+      },
+      "reliable": {
+        "title": "Pålidelig Kobenhavn-logistik",
+        "description": "48-timers levering på lagerførte varer. Én leverandør til hele din krydderiportefølje. Vi kender din drift."
+      }
+    },
+    "howItWorks": {
+      "title": "Sådan kommer du i gang",
+      "step1": { "title": "Anmod om en konto", "description": "Udfyld formularen nedenfor. Vi kontakter dig inden for én arbejdsdag." },
+      "step2": { "title": "Vi opsætter dine priser", "description": "Baseret på dit volumen og sortiment forhandler vi en pris, der er bedre end din nuværende." },
+      "step3": { "title": "Bestil online — altid", "description": "Log ind fra telefon eller computer og genbestil på under 30 sekunder." }
+    },
+    "range": {
+      "title": "Vores sortiment"
+    },
+    "categories": {
+      "whole_spices": "Hele Krydderier",
+      "ground_spices": "Malede Krydderier",
+      "herbs": "Urter",
+      "blends": "Blandinger",
+      "organic": "Økologisk"
+    },
+    "trust": {
+      "certified": "EU-certificeret",
+      "labTested": "Laboratorietestet hvert parti",
+      "origin": "Sporbar oprindelse"
+    },
+    "whoFor": {
+      "title": "Til professionelle køkkener",
+      "bakeries": "Bagerier",
+      "restaurants": "Restauranter",
+      "manufacturers": "Fødevareproducenter",
+      "healthFood": "Helsekostbrands"
+    },
+    "lead": {
+      "title": "Anmod om en konto",
+      "subtitle": "Fortæl os lidt om din virksomhed. Vi vender tilbage inden for én arbejdsdag.",
+      "businessName": "Virksomhedsnavn",
+      "contactName": "Kontaktperson",
+      "email": "E-mail",
+      "phone": "Telefon",
+      "segment": "Virksomhedstype",
+      "message": "Hvad køber du i dag? (ca. volumen og produkter)",
+      "submit": "Send anmodning",
+      "success": "Tak! Vi kontakter dig inden for én arbejdsdag.",
+      "segments": {
+        "bakery": "Bageri / Konditori",
+        "restaurant": "Restaurant / Catering",
+        "manufacturer": "Fødevareproducent",
+        "health_food": "Helsekost",
+        "distributor": "Distributør"
+      }
+    },
+    "footer": {
+      "tagline": "Certificerede krydderier direkte til det professionelle køkken.",
+      "privacy": "Privatlivspolitik",
+      "terms": "Handelsbetingelser",
+      "gdpr": "GDPR"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Log ind",
+      "email": "E-mail",
+      "password": "Adgangskode",
+      "submit": "Log ind",
+      "forgotPassword": "Glemt adgangskode?",
+      "magicLink": "Send magisk link",
+      "orContinueWith": "eller fortsæt med"
+    },
+    "errors": {
+      "invalidCredentials": "Forkert e-mail eller adgangskode.",
+      "emailRequired": "Indtast din e-mail.",
+      "passwordRequired": "Indtast din adgangskode."
+    }
+  },
+  "dashboard": {
+    "greeting": "Goddag, {name}",
+    "reorderLast": "Genbestil seneste ordre",
+    "myUsuals": "Mine sædvanlige",
+    "spendThisMonth": "Forbrug denne måned",
+    "nextDelivery": "Næste levering"
+  },
+  "common": {
+    "loading": "Indlæser...",
+    "error": "Noget gik galt. Prøv igen.",
+    "save": "Gem",
+    "cancel": "Annuller",
+    "confirm": "Bekræft",
+    "delete": "Slet",
+    "edit": "Rediger",
+    "back": "Tilbage",
+    "exVat": "ekskl. moms",
+    "incVat": "inkl. moms",
+    "vat": "Moms (25%)",
+    "perKg": "pr. kg",
+    "kg": "kg",
+    "currency": "kr."
+  }
+}
