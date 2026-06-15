@@ -19,24 +19,9 @@ export function Hero() {
         }}
       />
 
-      <div
-        className="max-w-7xl mx-auto px-6 sm:px-10"
-        style={{ minHeight: "100vh", display: "flex", flexDirection: "row", alignItems: "stretch" }}
-      >
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 flex flex-col lg:flex-row min-h-screen">
         {/* ── LEFT: text ─────────────────────────────────────────────── */}
-        <div
-          style={{
-            flex: "0 0 58%",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            paddingTop: "7rem",
-            paddingBottom: "5rem",
-            paddingRight: "3rem",
-            position: "relative",
-            zIndex: 10,
-          }}
-        >
+        <div className="flex flex-col justify-center pt-28 pb-16 lg:pr-12 lg:w-[58%] relative z-10">
           {/* Eyebrow */}
           <div
             style={{
@@ -147,13 +132,7 @@ export function Hero() {
         </div>
 
         {/* ── RIGHT: falling spices ──────────────────────────────────── */}
-        <div
-          style={{
-            flex: "0 0 42%",
-            position: "relative",
-            minHeight: "100vh",
-          }}
-        >
+        <div className="lg:w-[42%] relative min-h-[55vh] lg:min-h-screen">
           {/* Warm glow in the lower half */}
           <div
             style={{

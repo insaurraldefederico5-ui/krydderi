@@ -85,6 +85,8 @@
       "message": "Hvad køber du i dag? (ca. volumen og produkter)",
       "submit": "Send anmodning",
       "sending": "Sender…",
+      "getStarted": "Kom i gang",
+      "selectPlaceholder": "Vælg type…",
       "disclaimer": "Vi svarer inden for én arbejdsdag · Ingen binding",
       "successBody": "Vi vender tilbage inden for én arbejdsdag med et prisforslag til jeres sortiment.",
       "success": "Tak! Vi kontakter dig inden for én arbejdsdag.",
@@ -100,7 +102,10 @@
       "tagline": "Certificerede krydderier direkte til det professionelle køkken.",
       "privacy": "Privatlivspolitik",
       "terms": "Handelsbetingelser",
-      "gdpr": "GDPR"
+      "gdpr": "GDPR",
+      "portalTitle": "Portal",
+      "contactTitle": "Kontakt",
+      "range": "Sortiment"
     }
   },
   "auth": {

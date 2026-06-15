@@ -70,7 +70,7 @@ export function LeadForm() {
         {/* Header */}
         <div className="text-center mb-12 reveal">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] mb-4" style={{ color: "#B57422" }}>
-            Kom i gang
+            {t("getStarted")}
           </p>
           <h2
             className="text-3xl sm:text-4xl font-bold mb-4"
@@ -137,7 +137,7 @@ export function LeadForm() {
                 onFocus={e => (e.target.style.borderColor = "#B57422")}
                 onBlur={e  => (e.target.style.borderColor = "rgba(26,22,15,0.14)")}
               >
-                <option value="" style={{ background: "#F7F4EE" }}>Vælg type…</option>
+                <option value="" style={{ background: "#F7F4EE" }}>{t("selectPlaceholder")}</option>
                 {(["bakery","restaurant","manufacturer","health_food","distributor"] as const).map(s => (
                   <option key={s} value={s} style={{ background: "#F7F4EE" }}>
                     {t(`segments.${s}`)}

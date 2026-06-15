@@ -2,67 +2,93 @@
 
 import { useEffect, useState } from "react";
 
+/* ── High-quality sidebar spice illustrations ─────────────────── */
+
 function CardamomPod() {
   return (
-    <svg width="36" height="54" viewBox="0 0 36 54" fill="none">
-      <ellipse cx="18" cy="27" rx="13" ry="24" fill="#4A6840" opacity="0.88"/>
-      <ellipse cx="18" cy="27" rx="8"  ry="18" fill="#3A5830" opacity="0.28"/>
-      <line x1="7"  y1="17" x2="29" y2="17" stroke="#2A4020" strokeWidth="1.3" opacity="0.5"/>
-      <line x1="6"  y1="23" x2="30" y2="23" stroke="#2A4020" strokeWidth="1.3" opacity="0.5"/>
-      <line x1="6"  y1="29" x2="30" y2="29" stroke="#2A4020" strokeWidth="1.3" opacity="0.5"/>
-      <line x1="7"  y1="35" x2="29" y2="35" stroke="#2A4020" strokeWidth="1.3" opacity="0.5"/>
-      <line x1="9"  y1="41" x2="27" y2="41" stroke="#2A4020" strokeWidth="1.3" opacity="0.5"/>
-      <line x1="18" y1="3"  x2="18" y2="9"  stroke="#2A4020" strokeWidth="2.5" strokeLinecap="round"/>
+    <svg width="20" height="44" viewBox="0 0 20 44" style={{ filter: "drop-shadow(0 2px 5px rgba(0,0,0,0.22))" }}>
+      <path d="M10 3 C5 5 3 12 3 22 C3 31 5 38 10 40 C15 38 17 31 17 22 C17 12 15 5 10 3Z"
+        fill="#1A3A1A" opacity="0.3" transform="translate(0.8,1.5)"/>
+      <path d="M10 3 C5 5 3 12 3 22 C3 31 5 38 10 40 C15 38 17 31 17 22 C17 12 15 5 10 3Z"
+        fill="#3A6630"/>
+      <path d="M10 3 C7.5 5 5 12 5 22 C5 30 6.5 37 10 40 C11 37 11.5 30 11.5 22 C11.5 12 11 5 10 3Z"
+        fill="#4A8040" opacity="0.38"/>
+      <path d="M10 1 L10 4" stroke="#2A5020" strokeWidth="2.5" strokeLinecap="round"/>
+      <path d="M4.5 14 Q10 13 15.5 14" stroke="#2A5020" strokeWidth="0.8" fill="none" opacity="0.4"/>
+      <path d="M4 20 Q10 19 16 20"     stroke="#2A5020" strokeWidth="0.8" fill="none" opacity="0.4"/>
+      <path d="M4 27 Q10 26 16 27"     stroke="#2A5020" strokeWidth="0.8" fill="none" opacity="0.4"/>
+      <path d="M5 33 Q10 32 15 33"     stroke="#2A5020" strokeWidth="0.8" fill="none" opacity="0.4"/>
+      <path d="M6 6 C5 10 4.5 16 5 22" stroke="white" strokeWidth="2" fill="none" opacity="0.13" strokeLinecap="round"/>
     </svg>
   );
 }
 
-function ChiliPepper() {
+function PeppercornCluster() {
   return (
-    <svg width="28" height="60" viewBox="0 0 28 60" fill="none">
-      <path d="M14 0 Q17 4 14 9" stroke="#3A5020" strokeWidth="2.5" strokeLinecap="round"/>
-      <path d="M14 7 C21 11 25 26 23 40 C21 50 18 55 14 57 C10 55 7 50 5 40 C3 26 7 11 14 7Z"
-        fill="#A82010"/>
-      <path d="M14 11 C18 16 21 27 19 38 C18 44 16 48 14 50"
-        stroke="#C83020" strokeWidth="2.2" fill="none" opacity="0.42" strokeLinecap="round"/>
-      <circle cx="14" cy="12" r="2.2" fill="#E03828" opacity="0.28"/>
+    <svg width="44" height="30" viewBox="0 0 44 30" style={{ filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.2))" }}>
+      <circle cx="9.5"  cy="10.5" r="7.5" fill="#080404" opacity="0.3"/>
+      <circle cx="22"   cy="7"    r="7"   fill="#080404" opacity="0.3"/>
+      <circle cx="34"   cy="10.5" r="6.5" fill="#080404" opacity="0.3"/>
+      <circle cx="16"   cy="21"   r="6.5" fill="#080404" opacity="0.3"/>
+      <circle cx="28.5" cy="21"   r="6"   fill="#080404" opacity="0.3"/>
+      <circle cx="9"    cy="9.5"  r="7.5" fill="#2A1A0E"/>
+      <circle cx="21.5" cy="6.5"  r="7"   fill="#2A1A0E"/>
+      <circle cx="33.5" cy="9.5"  r="6.5" fill="#2A1A0E"/>
+      <circle cx="15.5" cy="20"   r="6.5" fill="#2A1A0E"/>
+      <circle cx="28"   cy="20"   r="6"   fill="#2A1A0E"/>
+      <circle cx="9"    cy="10"   r="5"   fill="#180E06" opacity="0.45"/>
+      <circle cx="21.5" cy="7"    r="4.8" fill="#180E06" opacity="0.45"/>
+      <circle cx="33.5" cy="10"   r="4.3" fill="#180E06" opacity="0.45"/>
+      <circle cx="15.5" cy="20.5" r="4.3" fill="#180E06" opacity="0.45"/>
+      <circle cx="28"   cy="20.5" r="4"   fill="#180E06" opacity="0.45"/>
+      <circle cx="6.5"  cy="7"    r="2.5" fill="white" opacity="0.13"/>
+      <circle cx="19"   cy="4.5"  r="2.2" fill="white" opacity="0.13"/>
+      <circle cx="31"   cy="7.5"  r="2"   fill="white" opacity="0.13"/>
+      <circle cx="13"   cy="17.5" r="2"   fill="white" opacity="0.13"/>
+      <circle cx="25.5" cy="17.5" r="1.8" fill="white" opacity="0.13"/>
     </svg>
   );
 }
 
-function CinnamonStick() {
+function ChiliPepperLarge() {
   return (
-    <svg width="22" height="60" viewBox="0 0 22 60" fill="none">
-      <rect x="2" y="1" width="18" height="58" rx="9" fill="#8B5E2A"/>
-      <rect x="6" y="1" width="6"  height="58" rx="3" fill="#A07030" opacity="0.22"/>
-      <line x1="2" y1="12" x2="20" y2="12" stroke="#6A4418" strokeWidth="1.2" opacity="0.48"/>
-      <line x1="2" y1="20" x2="20" y2="20" stroke="#6A4418" strokeWidth="1.2" opacity="0.48"/>
-      <line x1="2" y1="28" x2="20" y2="28" stroke="#6A4418" strokeWidth="1.2" opacity="0.48"/>
-      <line x1="2" y1="36" x2="20" y2="36" stroke="#6A4418" strokeWidth="1.2" opacity="0.48"/>
-      <line x1="2" y1="44" x2="20" y2="44" stroke="#6A4418" strokeWidth="1.2" opacity="0.48"/>
-      <line x1="2" y1="52" x2="20" y2="52" stroke="#6A4418" strokeWidth="1.2" opacity="0.48"/>
+    <svg width="13" height="54" viewBox="0 0 13 54" style={{ filter: "drop-shadow(0 2px 5px rgba(0,0,0,0.22))" }}>
+      <path d="M6.5 7 C9.5 11 11.5 23 11 35 C10.5 45 8.5 51 6.5 52 C4.5 51 2.5 45 2 35 C1.5 23 3.5 11 6.5 7Z"
+        fill="#5A0808" opacity="0.3" transform="translate(0.5,1)"/>
+      <path d="M6.5 7 C9.5 11 11.5 23 11 35 C10.5 45 8.5 51 6.5 52 C4.5 51 2.5 45 2 35 C1.5 23 3.5 11 6.5 7Z"
+        fill="#C22020"/>
+      <path d="M6.5 7 C5.5 10 4 19 4 29 C4 39 5 48 6.5 52 C7.5 49 8 41 8 31 C8 19 7.2 10 6.5 7Z"
+        fill="#D84040" opacity="0.32"/>
+      <path d="M6.5 2 C5.5 3 5 5 6.5 7 C8 5 7.5 3 6.5 2Z" fill="#3D6030"/>
+      <line x1="6.5" y1="1" x2="6.5" y2="7" stroke="#3D6030" strokeWidth="1.5"/>
+      <path d="M4.5 9 C4 15 3.5 23 3.8 33" stroke="white" strokeWidth="1.7" fill="none" opacity="0.16" strokeLinecap="round"/>
     </svg>
   );
 }
 
-function Peppercorns() {
+function CinnamonRoll() {
   return (
-    <svg width="50" height="34" viewBox="0 0 50 34" fill="none">
-      <circle cx="11"  cy="24" r="10" fill="#2A1A0E"/>
-      <circle cx="25"  cy="13" r="11" fill="#2A1A0E"/>
-      <circle cx="39"  cy="24" r="10" fill="#2A1A0E"/>
-      <circle cx="9.5"  cy="22" r="3.5" fill="#3E2818" opacity="0.38"/>
-      <circle cx="23.5" cy="11" r="4"   fill="#3E2818" opacity="0.38"/>
-      <circle cx="37.5" cy="22" r="3.5" fill="#3E2818" opacity="0.38"/>
+    <svg width="50" height="16" viewBox="0 0 50 16" style={{ filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.25))" }}>
+      <rect x="1" y="2"  width="49" height="14" rx="7" fill="#3A1A06" opacity="0.3"/>
+      <rect x="0" y="1"  width="50" height="14" rx="7" fill="#9B5820"/>
+      <rect x="1" y="1"  width="48" height="7"  rx="5.5" fill="#B87030" opacity="0.38"/>
+      <path d="M8   2  Q9   8 8   14" stroke="#7A3C0E" strokeWidth="1.5" fill="none" strokeLinecap="round" opacity="0.5"/>
+      <path d="M16  1  Q17  8 16  15" stroke="#7A3C0E" strokeWidth="1.5" fill="none" strokeLinecap="round" opacity="0.5"/>
+      <path d="M24  1  Q25  8 24  15" stroke="#7A3C0E" strokeWidth="1.5" fill="none" strokeLinecap="round" opacity="0.5"/>
+      <path d="M32  1  Q33  8 32  15" stroke="#7A3C0E" strokeWidth="1.5" fill="none" strokeLinecap="round" opacity="0.5"/>
+      <path d="M40  2  Q41  8 40  14" stroke="#7A3C0E" strokeWidth="1.5" fill="none" strokeLinecap="round" opacity="0.5"/>
+      <path d="M7 3 Q25 2 43 3" stroke="white" strokeWidth="2" fill="none" opacity="0.12" strokeLinecap="round"/>
     </svg>
   );
 }
+
+/* ── Spice config ─────────────────────────────────────────────── */
 
 const SPICES = [
-  { C: CardamomPod,   top: "14%", rate: 0.07, delay: "0s",   bobDur: "5.5s" },
-  { C: Peppercorns,   top: "33%", rate: 0.10, delay: "0.8s", bobDur: "4.8s" },
-  { C: ChiliPepper,   top: "53%", rate: 0.06, delay: "1.5s", bobDur: "6.3s" },
-  { C: CinnamonStick, top: "71%", rate: 0.09, delay: "0.3s", bobDur: "5.1s" },
+  { C: CardamomPod,      top: "12%", rate: 0.07, delay: "0s",   bobDur: "5.5s" },
+  { C: PeppercornCluster,top: "31%", rate: 0.10, delay: "0.8s", bobDur: "4.8s" },
+  { C: ChiliPepperLarge, top: "52%", rate: 0.06, delay: "1.5s", bobDur: "6.3s" },
+  { C: CinnamonRoll,     top: "70%", rate: 0.09, delay: "0.3s", bobDur: "5.1s" },
 ];
 
 export function StickySpices() {
@@ -92,7 +118,6 @@ export function StickySpices() {
       }}
     >
       {SPICES.map(({ C, top, rate, delay, bobDur }, i) => (
-        /* outer: scroll-driven Y offset */
         <div
           key={i}
           style={{
@@ -102,7 +127,6 @@ export function StickySpices() {
             transform: `translateY(${Math.min(scrollY * rate, 240)}px)`,
           }}
         >
-          {/* inner: CSS bobbing animation */}
           <div style={{ animation: `spice-bob ${bobDur} ease-in-out infinite ${delay}` }}>
             <C />
           </div>

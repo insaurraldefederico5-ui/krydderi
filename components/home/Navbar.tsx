@@ -2,13 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
-import { Link, usePathname } from "@/i18n/navigation";
+import { Link } from "@/i18n/navigation";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const nav     = useTranslations("nav");
-  const locale  = useLocale();
-  const pathname = usePathname();
+  const nav    = useTranslations("nav");
+  const locale = useLocale();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -83,7 +82,7 @@ export function Navbar() {
             {(["da", "en"] as const).map((loc, i) => (
               <Link
                 key={loc}
-                href={pathname}
+                href="/"
                 locale={loc}
                 style={{
                   padding: "5px 11px",

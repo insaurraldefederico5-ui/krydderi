@@ -85,6 +85,8 @@
       "message": "What do you buy today? (approx. volume and products)",
       "submit": "Send request",
       "sending": "Sending…",
+      "getStarted": "Get started",
+      "selectPlaceholder": "Select type…",
       "disclaimer": "We reply within one business day · No commitment",
       "successBody": "We'll get back to you within one business day with a quote for your range.",
       "success": "Thank you! We'll be in touch within one business day.",
@@ -100,7 +102,10 @@
       "tagline": "Certified spices direct to the professional kitchen.",
       "privacy": "Privacy policy",
       "terms": "Terms",
-      "gdpr": "GDPR"
+      "gdpr": "GDPR",
+      "portalTitle": "Portal",
+      "contactTitle": "Contact",
+      "range": "Range"
     }
   },
   "auth": {
