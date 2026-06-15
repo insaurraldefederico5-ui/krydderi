@@ -149,7 +149,7 @@ export function Hero() {
               maskImage: "linear-gradient(to right, transparent 0%, black 18%)",
             }}
           >
-            <source src="/video/spices.mp4" type="video/mp4" />
+            <source src="/api/video" type="video/mp4" />
           </video>
         </div>
       </div>
