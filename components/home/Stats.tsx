@@ -1,11 +1,15 @@
-const STATS = [
-  { value: "48 t",    label: "Leveringstid på lagerførte varer" },
-  { value: "15+",     label: "Oprindelseslande repræsenteret" },
-  { value: "100 %",   label: "Laboratorietestet hvert parti" },
-  { value: "Net 30",  label: "Fleksible betalingsbetingelser" },
-];
+import { useTranslations } from "next-intl";
 
 export function Stats() {
+  const t = useTranslations("home.stats");
+
+  const STATS = [
+    { value: t("delivery.value"), label: t("delivery.label") },
+    { value: t("countries.value"), label: t("countries.label") },
+    { value: t("tested.value"),    label: t("tested.label")   },
+    { value: t("payment.value"),   label: t("payment.label")  },
+  ];
+
   return (
     <section className="py-16 px-5" style={{ background: "#111009" }}>
       <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8">

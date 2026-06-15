@@ -63,7 +63,7 @@ export function Hero() {
             className="text-xs font-semibold uppercase tracking-[0.22em]"
             style={{ color: "#c4800a" }}
           >
-            København · Direkte fra kilden
+            {t("eyebrow")}
           </span>
           <span style={{ width: 28, height: 1, background: "#c4800a", display: "inline-block" }} />
         </div>
@@ -141,7 +141,7 @@ export function Hero() {
             animation: "hero-in 0.9s ease both 0.8s",
           }}
         >
-          Betroet af bagerier, restauranter og fødevareproducenter i hele Danmark
+          {t("socialProof")}
         </p>
       </div>
 

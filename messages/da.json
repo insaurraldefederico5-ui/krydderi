@@ -11,7 +11,15 @@
       "headline": "Krydderier direkte fra oprindelsen. Leveret i København.",
       "subhead": "Samme certificerede kvalitet som din nuværende leverandør — bedre pris, fuld sporbarhed, 48-timers levering.",
       "ctaLogin": "Log ind på din konto",
-      "ctaRequest": "Anmod om konto"
+      "ctaRequest": "Anmod om konto",
+      "eyebrow": "København · Direkte fra kilden",
+      "socialProof": "Betroet af bagerier, restauranter og fødevareproducenter i hele Danmark"
+    },
+    "stats": {
+      "delivery": { "value": "48 t", "label": "Leveringstid på lagerførte varer" },
+      "countries": { "value": "15+", "label": "Oprindelseslande repræsenteret" },
+      "tested": { "value": "100 %", "label": "Laboratorietestet hvert parti" },
+      "payment": { "value": "Net 30", "label": "Fleksible betalingsbetingelser" }
     },
     "valueProps": {
       "title": "Hvorfor Krydderi?",
@@ -47,7 +55,14 @@
     "trust": {
       "certified": "EU-certificeret",
       "labTested": "Laboratorietestet hvert parti",
-      "origin": "Sporbar oprindelse"
+      "origin": "Sporbar oprindelse",
+      "badges": {
+        "organic":   { "label": "EU Øko",      "sub": "Certificeret" },
+        "fairtrade": { "label": "Fairtrade",   "sub": "Certificeret" },
+        "lab":       { "label": "Lab-testet",  "sub": "Hvert parti"  },
+        "gdpr":      { "label": "GDPR",        "sub": "EU-data"      },
+        "trace":     { "label": "Sporbarhed",  "sub": "Oprindelsesdok." }
+      }
     },
     "whoFor": {
       "title": "Til professionelle køkkener",
@@ -66,6 +81,9 @@
       "segment": "Virksomhedstype",
       "message": "Hvad køber du i dag? (ca. volumen og produkter)",
       "submit": "Send anmodning",
+      "sending": "Sender…",
+      "disclaimer": "Vi svarer inden for én arbejdsdag · Ingen binding",
+      "successBody": "Vi vender tilbage inden for én arbejdsdag med et prisforslag til jeres sortiment.",
       "success": "Tak! Vi kontakter dig inden for én arbejdsdag.",
       "segments": {
         "bakery": "Bageri / Konditori",

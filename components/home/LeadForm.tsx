@@ -57,7 +57,7 @@ export function LeadForm() {
             {t("success")}
           </h3>
           <p className="text-sm" style={{ color: "rgba(245,230,200,0.5)" }}>
-            Vi vender tilbage inden for én arbejdsdag med et prisforslag til jeres sortiment.
+            {t("successBody")}
           </p>
         </div>
       </section>
@@ -189,11 +189,11 @@ export function LeadForm() {
               boxShadow: loading ? "none" : "0 0 28px rgba(196,128,10,0.25)",
             }}
           >
-            {loading ? "Sender…" : t("submit")}
+            {loading ? t("sending") : t("submit")}
           </button>
 
           <p className="mt-4 text-center text-xs" style={{ color: "rgba(245,230,200,0.3)" }}>
-            Vi svarer inden for én arbejdsdag · Ingen binding
+            {t("disclaimer")}
           </p>
         </form>
       </div>
