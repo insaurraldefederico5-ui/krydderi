@@ -8,40 +8,40 @@
   },
   "home": {
     "hero": {
-      "headline": "Krydderier direkte fra oprindelsen. Leveret i København.",
-      "subhead": "Samme certificerede kvalitet som din nuværende leverandør — bedre pris, fuld sporbarhed, 48-timers levering.",
+      "headline": "Certificerede krydderier, indkøbt ved kilden og lagerført i København.",
+      "subhead": "Krydderier og urter i bulk til professionelle køkkener — med fuld sporbarhed og levering i København.",
       "ctaLogin": "Log ind på din konto",
-      "ctaRequest": "Anmod om konto",
-      "eyebrow": "København · Direkte fra kilden",
-      "socialProof": "Betroet af bagerier, restauranter og fødevareproducenter i hele Danmark"
+      "ctaRequest": "Anmod om en konto",
+      "eyebrow": "København · Indkøbt ved kilden",
+      "socialProof": "Leverer til bagerier, restauranter og fødevareproducenter i hele Danmark."
     },
     "stats": {
-      "delivery": { "value": "48 t", "label": "Leveringstid på lagerførte varer" },
-      "countries": { "value": "15+", "label": "Oprindelseslande repræsenteret" },
-      "tested": { "value": "100 %", "label": "Laboratorietestet hvert parti" },
-      "payment": { "value": "Net 30", "label": "Fleksible betalingsbetingelser" }
+      "delivery": { "value": "48 t",      "label": "Fra ordre til levering i København" },
+      "countries": { "value": "15+",      "label": "Lande vi indkøber fra" },
+      "tested":    { "value": "100 %",    "label": "Partier laboratorietestet" },
+      "payment":   { "value": "Netto 14", "label": "Betaling på faktura" }
     },
     "valueProps": {
-      "title": "Hvorfor Krydderi?",
-      "subtitle": "Det der gør forskellen for professionelle køkkener",
+      "title": "Hvorfor Krydderi",
+      "subtitle": "Bygget til professionelt indkøb",
       "direct": {
-        "title": "Direkte fra kilden",
-        "description": "Vi skærer den tyske og hollandske mellemhandel fra. Cardamom fra Guatemala, gurkemeje fra Indien — købt direkte fra kooperativer med sporbare certifikater."
+        "title": "Indkøbt direkte",
+        "description": "Vi køber ved kilden og importerer selv, så vejen fra avler til dit køkken er kort. Færre led betyder friskere varer og priser, der holder."
       },
       "certified": {
-        "title": "Certificeret & sporbar",
-        "description": "EU-Økologi, Fairtrade, Kosher — og et laboratorieanalysecertifikat med hvert parti. Ikke bare ord på en pose."
+        "title": "Dokumenteret kvalitet",
+        "description": "Hvert parti er laboratorietestet og leveres med analysecertifikat i systemet. EU-økologi og Fairtrade fås, hvor du har brug for det."
       },
       "reliable": {
-        "title": "Pålidelig Kobenhavn-logistik",
-        "description": "48-timers levering på lagerførte varer. Én leverandør til hele din krydderiportefølje. Vi kender din drift."
+        "title": "Logistik fra København",
+        "description": "Vi lagerfører lokalt og sender fra København, så genbestillinger kommer på en tidsplan, du kan planlægge efter. Stabil forsyning, ingen overraskelser midt i ugen."
       }
     },
     "howItWorks": {
-      "title": "Sådan kommer du i gang",
-      "step1": { "title": "Anmod om en konto", "description": "Udfyld formularen nedenfor. Vi kontakter dig inden for én arbejdsdag." },
-      "step2": { "title": "Vi opsætter dine priser", "description": "Baseret på dit volumen og sortiment forhandler vi en pris, der er bedre end din nuværende." },
-      "step3": { "title": "Bestil online — altid", "description": "Log ind fra telefon eller computer og genbestil på under 30 sekunder." }
+      "title": "Sådan fungerer det",
+      "step1": { "title": "Anmod om en konto", "description": "Udfyld formularen nedenfor og fortæl os, hvem I er." },
+      "step2": { "title": "Vi fastsætter jeres priser", "description": "Vi opsætter priser for jeres konto ud fra jeres sortiment og volumen." },
+      "step3": { "title": "Genbestil online, når som helst", "description": "Afgiv og gentag ordrer fra enhver enhed, med jeres priser allerede på plads." }
     },
     "range": {
       "title": "Vores sortiment"
@@ -49,8 +49,8 @@
     "categories": {
       "subtitle": "Alt på lager — fortoldet og klar til levering",
       "browse": "Se sortiment",
-      "whole_spices": "Hele Krydderier",
-      "ground_spices": "Malede Krydderier",
+      "whole_spices": "Hele krydderier",
+      "ground_spices": "Malede krydderier",
       "herbs": "Urter",
       "blends": "Blandinger",
       "organic": "Økologisk"
@@ -60,11 +60,11 @@
       "labTested": "Laboratorietestet hvert parti",
       "origin": "Sporbar oprindelse",
       "badges": {
-        "organic":   { "label": "EU Øko",      "sub": "Certificeret" },
-        "fairtrade": { "label": "Fairtrade",   "sub": "Certificeret" },
-        "lab":       { "label": "Lab-testet",  "sub": "Hvert parti"  },
-        "gdpr":      { "label": "GDPR",        "sub": "EU-data"      },
-        "trace":     { "label": "Sporbarhed",  "sub": "Oprindelsesdok." }
+        "organic":   { "label": "EU Øko",     "sub": "Certificeret"    },
+        "fairtrade": { "label": "Fairtrade",  "sub": "Certificeret"    },
+        "lab":       { "label": "Lab-testet", "sub": "Hvert parti"     },
+        "gdpr":      { "label": "GDPR",       "sub": "EU-data"         },
+        "trace":     { "label": "Sporbarhed", "sub": "Oprindelsesdok." }
       }
     },
     "whoFor": {
@@ -74,22 +74,41 @@
       "manufacturers": "Fødevareproducenter",
       "healthFood": "Helsekostbrands"
     },
+    "testimonials": {
+      "title": "Hvad vores kunder siger",
+      "q0": {
+        "quote": "Kardemommen og kanelen er ens fra parti til parti, og det betyder noget, når man bager de samme produkter hver dag. Genbestilling tager et minut, og leveringen holder.",
+        "name": "Lars Meyer",
+        "role": "Ejer, Meyers Bageri"
+      },
+      "q1": {
+        "quote": "Vi får den oprindelsesdokumentation, vi har brug for, uden at skulle rykke for den. Kvaliteten er, hvor den skal være, og forsyningen har været stabil gennem travle sæsoner.",
+        "name": "Anders Nicolajsen",
+        "role": "Køkkenchef, Kadeau"
+      },
+      "q2": {
+        "quote": "Skiftet til Krydderi strammede vores priser og fjernede et led i forsyningskæden. Certifikater og laboratorieresultater ligger i systemet, hvilket gør vores egne audits ligetil.",
+        "name": "Sara Lindgren",
+        "role": "Indkøbschef, Nordic Naturals"
+      }
+    },
     "lead": {
       "title": "Anmod om en konto",
-      "subtitle": "Fortæl os lidt om din virksomhed. Vi vender tilbage inden for én arbejdsdag.",
+      "subtitle": "Fortæl os om jeres virksomhed. Vi vender tilbage inden for én hverdag.",
       "businessName": "Virksomhedsnavn",
       "contactName": "Kontaktperson",
       "email": "E-mail",
       "phone": "Telefon",
       "segment": "Virksomhedstype",
-      "message": "Hvad køber du i dag? (ca. volumen og produkter)",
+      "message": "Er der noget, vi bør vide? (valgfrit)",
+      "messagePlaceholder": "En kort note om jeres virksomhed, eller hvad I søger.",
       "submit": "Send anmodning",
       "sending": "Sender…",
       "getStarted": "Kom i gang",
       "selectPlaceholder": "Vælg type…",
-      "disclaimer": "Vi svarer inden for én arbejdsdag · Ingen binding",
-      "successBody": "Vi vender tilbage inden for én arbejdsdag med et prisforslag til jeres sortiment.",
-      "success": "Tak! Vi kontakter dig inden for én arbejdsdag.",
+      "disclaimer": "Vi svarer inden for én hverdag · Ingen binding",
+      "successBody": "Tak — vi gennemgår jeres oplysninger og vender tilbage inden for én hverdag.",
+      "success": "Anmodning modtaget",
       "segments": {
         "bakery": "Bageri / Konditori",
         "restaurant": "Restaurant / Catering",

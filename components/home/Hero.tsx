@@ -45,10 +45,10 @@ export function Hero() {
           <h1
             className="hero-headline"
             style={{
-              fontSize: "clamp(3rem, 8.5vw, 8.5rem)",
+              fontSize: "clamp(2rem, 3.8vw, 4rem)",
               color: "#1A160F",
               animation: "hero-in 0.9s ease both 0.25s",
-              maxWidth: "14ch",
+              maxWidth: "22ch",
             }}
           >
             {t("headline")}

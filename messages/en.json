@@ -8,40 +8,40 @@
   },
   "home": {
     "hero": {
-      "headline": "Spices direct from origin. Delivered in Copenhagen.",
-      "subhead": "Same certified quality as your current supplier — better price, full traceability, 48-hour delivery.",
+      "headline": "Certified spices, sourced at origin and stocked in Copenhagen.",
+      "subhead": "Bulk spices and herbs for professional kitchens, with full traceability and Copenhagen delivery.",
       "ctaLogin": "Log in to your account",
       "ctaRequest": "Request an account",
-      "eyebrow": "Copenhagen · Direct from origin",
-      "socialProof": "Trusted by bakeries, restaurants and food producers across Denmark"
+      "eyebrow": "Copenhagen · Sourced at origin",
+      "socialProof": "Supplying bakeries, restaurants and food producers across Denmark."
     },
     "stats": {
-      "delivery": { "value": "48 h", "label": "Delivery time on stocked items" },
-      "countries": { "value": "15+", "label": "Countries of origin" },
-      "tested": { "value": "100 %", "label": "Lab-tested every batch" },
-      "payment": { "value": "Net 30", "label": "Flexible payment terms" }
+      "delivery": { "value": "48 h",    "label": "From order to Copenhagen delivery" },
+      "countries": { "value": "15+",    "label": "Countries we source from" },
+      "tested":    { "value": "100 %",  "label": "Batches lab tested" },
+      "payment":   { "value": "Net 14", "label": "Invoiced payment terms" }
     },
     "valueProps": {
-      "title": "Why Krydderi?",
-      "subtitle": "What sets us apart for professional kitchens",
+      "title": "Why Krydderi",
+      "subtitle": "Built for professional procurement",
       "direct": {
-        "title": "Direct from source",
-        "description": "We cut out the German and Dutch middleman. Cardamom from Guatemala, turmeric from India — bought directly from co-ops with traceable certificates."
+        "title": "Sourced direct",
+        "description": "We buy at origin and import ourselves, so the chain from grower to your kitchen stays short. Fewer hands means fresher stock and pricing that holds."
       },
       "certified": {
-        "title": "Certified & traceable",
-        "description": "EU Organic, Fairtrade, Kosher — and a Certificate of Analysis with every batch. Not just words on a bag."
+        "title": "Documented quality",
+        "description": "Every batch is lab tested and arrives with a certificate of analysis on file. EU Organic and Fairtrade ranges are available where you need them."
       },
       "reliable": {
-        "title": "Reliable Copenhagen logistics",
-        "description": "48-hour delivery on stocked items. One supplier for your entire spice portfolio. We know your operation."
+        "title": "Copenhagen logistics",
+        "description": "We hold stock locally and ship from Copenhagen, so reorders arrive on a schedule you can plan around. Consistent supply, no surprises mid-week."
       }
     },
     "howItWorks": {
       "title": "How it works",
-      "step1": { "title": "Request an account", "description": "Fill in the form below. We'll be in touch within one business day." },
-      "step2": { "title": "We set your pricing", "description": "Based on your volume and range, we negotiate a price that beats your current supplier." },
-      "step3": { "title": "Order online — always", "description": "Log in from phone or computer and reorder in under 30 seconds." }
+      "step1": { "title": "Request an account", "description": "Fill in the form below and tell us who you are." },
+      "step2": { "title": "We set your pricing", "description": "We configure pricing for your account based on your range and volume." },
+      "step3": { "title": "Reorder online, anytime", "description": "Place and repeat orders from any device, with your prices already in place." }
     },
     "range": {
       "title": "Our range"
@@ -60,11 +60,11 @@
       "labTested": "Lab-tested every batch",
       "origin": "Traceable origin",
       "badges": {
-        "organic":   { "label": "EU Organic",    "sub": "Certified"    },
-        "fairtrade": { "label": "Fairtrade",     "sub": "Certified"    },
-        "lab":       { "label": "Lab-tested",    "sub": "Every batch"  },
-        "gdpr":      { "label": "GDPR",          "sub": "EU data"      },
-        "trace":     { "label": "Traceability",  "sub": "Origin docs"  }
+        "organic":   { "label": "EU Organic",   "sub": "Certified"   },
+        "fairtrade": { "label": "Fairtrade",    "sub": "Certified"   },
+        "lab":       { "label": "Lab-tested",   "sub": "Every batch" },
+        "gdpr":      { "label": "GDPR",         "sub": "EU data"     },
+        "trace":     { "label": "Traceability", "sub": "Origin docs" }
       }
     },
     "whoFor": {
@@ -74,22 +74,41 @@
       "manufacturers": "Food manufacturers",
       "healthFood": "Health-food brands"
     },
+    "testimonials": {
+      "title": "What our customers say",
+      "q0": {
+        "quote": "The cardamom and cinnamon are consistent batch to batch, which matters when you're baking the same products every day. Reordering takes a minute and the delivery window holds.",
+        "name": "Lars Meyer",
+        "role": "Owner, Meyers Bageri"
+      },
+      "q1": {
+        "quote": "We get the origin documentation we need without having to chase anyone for it. The quality is where it should be, and supply has been steady through busy seasons.",
+        "name": "Anders Nicolajsen",
+        "role": "Head Chef, Kadeau"
+      },
+      "q2": {
+        "quote": "Switching to Krydderi tightened our pricing and cut a step out of our supply chain. The certificates and lab results are on file, which makes our own audits straightforward.",
+        "name": "Sara Lindgren",
+        "role": "Procurement Manager, Nordic Naturals"
+      }
+    },
     "lead": {
       "title": "Request an account",
-      "subtitle": "Tell us a little about your business. We'll get back to you within one business day.",
+      "subtitle": "Tell us about your business. We'll be in touch within one business day.",
       "businessName": "Business name",
       "contactName": "Contact person",
       "email": "Email",
       "phone": "Phone",
       "segment": "Business type",
-      "message": "What do you buy today? (approx. volume and products)",
+      "message": "Anything you'd like us to know? (optional)",
+      "messagePlaceholder": "A note about your business or what you're looking for.",
       "submit": "Send request",
       "sending": "Sending…",
       "getStarted": "Get started",
       "selectPlaceholder": "Select type…",
       "disclaimer": "We reply within one business day · No commitment",
-      "successBody": "We'll get back to you within one business day with a quote for your range.",
-      "success": "Thank you! We'll be in touch within one business day.",
+      "successBody": "Thanks — we'll review your details and get back to you within one business day.",
+      "success": "Request received",
       "segments": {
         "bakery": "Bakery / Pastry",
         "restaurant": "Restaurant / Catering",

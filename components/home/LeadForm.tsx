@@ -148,8 +148,8 @@ export function LeadForm() {
             <div className="sm:col-span-2">
               <label style={labelStyle}>{t("message")}</label>
               <textarea
-                name="message" rows={4}
-                placeholder="Ca. 20 kg kardemomme og 10 kg kanel om måneden…"
+                name="message" rows={3}
+                placeholder={t("messagePlaceholder")}
                 style={{ ...inputStyle, resize: "vertical" }}
                 onFocus={e => (e.target.style.borderColor = "#B57422")}
                 onBlur={e  => (e.target.style.borderColor = "rgba(26,22,15,0.14)")}
