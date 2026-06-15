@@ -23,6 +23,7 @@
     },
     "valueProps": {
       "title": "Hvorfor Krydderi?",
+      "subtitle": "Det der gør forskellen for professionelle køkkener",
       "direct": {
         "title": "Direkte fra kilden",
         "description": "Vi skærer den tyske og hollandske mellemhandel fra. Cardamom fra Guatemala, gurkemeje fra Indien — købt direkte fra kooperativer med sporbare certifikater."
@@ -46,6 +47,8 @@
       "title": "Vores sortiment"
     },
     "categories": {
+      "subtitle": "Alt på lager — fortoldet og klar til levering",
+      "browse": "Se sortiment",
       "whole_spices": "Hele Krydderier",
       "ground_spices": "Malede Krydderier",
       "herbs": "Urter",

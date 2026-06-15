@@ -1,147 +1,114 @@
-"use client";
+/* Server component — pure CSS animations, no JS needed */
 
-import { useEffect, useRef } from "react";
+type SpiceType = "pepper" | "cardamom" | "turmeric" | "chili" | "cumin" | "coriander" | "saffron";
+type FallDir   = "ll" | "l" | "c" | "r" | "rr";
 
-/* ── SVG path data for each spice shape ───────────────────────────── */
-const SHAPES = [
-  {
-    // Star anise — 8-point star
-    d: "M12 2 L13.8 8.6 L20.5 7.2 L16 12 L20.5 16.8 L13.8 15.4 L12 22 L10.2 15.4 L3.5 16.8 L8 12 L3.5 7.2 L10.2 8.6 Z",
-    fill: "#6B3A2A",
-    stroke: "#9B5A3A",
-  },
-  {
-    // Cardamom pod — tapered oval
-    d: "M12 2 C15.5 3 18 7 18 12 C18 17 15.5 21 12 22 C8.5 21 6 17 6 12 C6 7 8.5 3 12 2 Z",
-    fill: "#4A6741",
-    stroke: "#6B8E5A",
-  },
-  {
-    // Cinnamon stick — thin rounded rect
-    d: "M11 3 H13 Q14 3 14 4 L14 20 Q14 21 13 21 H11 Q10 21 10 20 L10 4 Q10 3 11 3 Z",
-    fill: "#7A3B1E",
-    stroke: "#A0522D",
-  },
-  {
-    // Peppercorn — small sphere
-    d: "M12 5 A7 7 0 1 1 11.99 5 Z",
-    fill: "#1E1210",
-    stroke: "#3D2419",
-  },
-  {
-    // Herb leaf
-    d: "M12 3 C7 5 3 9.5 3 14 C3 18 6.5 21 12 22 C17.5 21 21 18 21 14 C21 9.5 17 5 12 3 Z M12 3 L12 22",
-    fill: "#3D5C30",
-    stroke: "#5A7A45",
-  },
-  {
-    // Chili pepper
-    d: "M12 4 C9 4 7 7.5 7 11 C7 15.5 9 19 12 21 C15 19 17 15.5 17 11 C17 7.5 15 4 12 4 Z M12 4 L12.5 1",
-    fill: "#8B1A0A",
-    stroke: "#B22C14",
-  },
-  {
-    // Cumin seed — small crescent
-    d: "M8 12 C8 7 10 4 12 4 C14 4 16 7 16 12 C16 14 15 16 12 17 C9 16 8 14 8 12 Z",
-    fill: "#8B6914",
-    stroke: "#A8801E",
-  },
-];
-
-interface SpiceParticle {
-  left: string;
-  delay: number;
-  duration: number;
-  size: number;
-  shapeIdx: number;
-  swayDuration: number;
-  swayDelay: number;
+function SpiceSVG({ type }: { type: SpiceType }) {
+  switch (type) {
+    case "pepper":
+      return (
+        <svg width="10" height="10" viewBox="0 0 10 10">
+          <circle cx="5" cy="5" r="5" fill="#2A1A0E"/>
+          <circle cx="3.5" cy="3.5" r="1.5" fill="#3E2818" opacity="0.4"/>
+        </svg>
+      );
+    case "cardamom":
+      return (
+        <svg width="8" height="15" viewBox="0 0 8 15">
+          <ellipse cx="4" cy="7.5" rx="3.5" ry="7" fill="#3D5E32"/>
+          <line x1="1"   y1="5"    x2="7"   y2="5"   stroke="#2A4020" strokeWidth="0.9" opacity="0.55"/>
+          <line x1="0.5" y1="7.5"  x2="7.5" y2="7.5" stroke="#2A4020" strokeWidth="0.9" opacity="0.55"/>
+          <line x1="1"   y1="10"   x2="7"   y2="10"  stroke="#2A4020" strokeWidth="0.9" opacity="0.55"/>
+        </svg>
+      );
+    case "turmeric":
+      return (
+        <svg width="13" height="10" viewBox="0 0 13 10">
+          <path d="M2 8.5L0 5.5L1.5 1.5L5 0L10 1L12.5 4.5L11 8.5L6.5 10L2 8.5Z" fill="#C8920A"/>
+          <path d="M3.5 7.5L2 5L3.5 2.5L6 1.5L9 2L10.5 5L9 7.5L6.5 8.5Z" fill="#D4A420" opacity="0.28"/>
+        </svg>
+      );
+    case "chili":
+      return (
+        <svg width="11" height="8" viewBox="0 0 11 8">
+          <path d="M0 4.5L1.5 1.5L5 0L10 2L11 5L8.5 7.5L4 6.5L0 4.5Z" fill="#A82010"/>
+          <path d="M3.5 5.5L2 3.5L3.5 1.5L6 1L9 2.5L9.5 4.5L8 6L4.5 6Z" fill="#C02818" opacity="0.22"/>
+        </svg>
+      );
+    case "cumin":
+      return (
+        <svg width="5" height="15" viewBox="0 0 5 15">
+          <ellipse cx="2.5" cy="7.5" rx="2.2" ry="7" fill="#6B4220"/>
+          <ellipse cx="2.5" cy="7.5" rx="0.8" ry="5.5" fill="#7A5230" opacity="0.28"/>
+        </svg>
+      );
+    case "coriander":
+      return (
+        <svg width="12" height="12" viewBox="0 0 12 12">
+          <circle cx="6" cy="6" r="5.5" fill="#8B6844"/>
+          <circle cx="6" cy="6" r="3.5" fill="#9A7854" opacity="0.28"/>
+          <path d="M6 0.5v11M0.5 6h11" stroke="#6A5030" strokeWidth="0.8" opacity="0.18"/>
+        </svg>
+      );
+    case "saffron":
+      return (
+        <svg width="13" height="20" viewBox="0 0 13 20">
+          <path d="M6.5 0 Q4 7 3 13 Q2.5 16 4.5 20"
+            stroke="#B82A0A" strokeWidth="1.8" fill="none" strokeLinecap="round"/>
+          <path d="M6.5 0 Q9 8 10 14 Q10.5 17 9 20"
+            stroke="#C44010" strokeWidth="1.2" fill="none" strokeLinecap="round" opacity="0.62"/>
+        </svg>
+      );
+  }
 }
 
-/* Deterministic "random" distribution so SSR & client match */
-const PARTICLES: SpiceParticle[] = [
-  { left: "3%",  delay: 0,  duration: 13, size: 20, shapeIdx: 0, swayDuration: 9,  swayDelay: 0   },
-  { left: "8%",  delay: 4,  duration: 10, size: 13, shapeIdx: 3, swayDuration: 7,  swayDelay: 2   },
-  { left: "14%", delay: 8,  duration: 15, size: 22, shapeIdx: 1, swayDuration: 11, swayDelay: 1   },
-  { left: "19%", delay: 2,  duration: 12, size: 16, shapeIdx: 4, swayDuration: 8,  swayDelay: 3   },
-  { left: "25%", delay: 6,  duration: 14, size: 18, shapeIdx: 2, swayDuration: 10, swayDelay: 0   },
-  { left: "31%", delay: 11, duration: 11, size: 24, shapeIdx: 5, swayDuration: 7,  swayDelay: 4   },
-  { left: "37%", delay: 3,  duration: 16, size: 14, shapeIdx: 6, swayDuration: 12, swayDelay: 2   },
-  { left: "43%", delay: 9,  duration: 13, size: 20, shapeIdx: 0, swayDuration: 9,  swayDelay: 5   },
-  { left: "49%", delay: 1,  duration: 12, size: 17, shapeIdx: 3, swayDuration: 8,  swayDelay: 1   },
-  { left: "55%", delay: 7,  duration: 14, size: 22, shapeIdx: 1, swayDuration: 10, swayDelay: 3   },
-  { left: "61%", delay: 5,  duration: 11, size: 15, shapeIdx: 5, swayDuration: 7,  swayDelay: 0   },
-  { left: "67%", delay: 12, duration: 15, size: 19, shapeIdx: 2, swayDuration: 11, swayDelay: 6   },
-  { left: "73%", delay: 2,  duration: 13, size: 23, shapeIdx: 4, swayDuration: 9,  swayDelay: 2   },
-  { left: "79%", delay: 8,  duration: 12, size: 16, shapeIdx: 6, swayDuration: 8,  swayDelay: 4   },
-  { left: "85%", delay: 4,  duration: 16, size: 21, shapeIdx: 0, swayDuration: 12, swayDelay: 1   },
-  { left: "90%", delay: 10, duration: 11, size: 14, shapeIdx: 3, swayDuration: 7,  swayDelay: 5   },
-  { left: "95%", delay: 6,  duration: 14, size: 18, shapeIdx: 5, swayDuration: 10, swayDelay: 3   },
-  { left: "11%", delay: 14, duration: 17, size: 12, shapeIdx: 2, swayDuration: 13, swayDelay: 7   },
-  { left: "47%", delay: 16, duration: 12, size: 26, shapeIdx: 1, swayDuration: 8,  swayDelay: 0   },
-  { left: "71%", delay: 13, duration: 15, size: 15, shapeIdx: 4, swayDuration: 10, swayDelay: 6   },
+const PARTICLES: { type: SpiceType; x: number; fall: FallDir; dur: number; delay: number }[] = [
+  { type: "pepper",    x: -155, fall: "ll", dur: 3.8, delay: 0.0  },
+  { type: "cardamom",  x: -125, fall: "ll", dur: 4.5, delay: 1.5  },
+  { type: "cumin",     x: -105, fall: "ll", dur: 3.3, delay: 3.0  },
+  { type: "chili",     x: -120, fall: "ll", dur: 4.2, delay: 2.2  },
+  { type: "turmeric",  x:  -80, fall: "l",  dur: 4.1, delay: 0.7  },
+  { type: "coriander", x:  -58, fall: "l",  dur: 4.8, delay: 2.5  },
+  { type: "pepper",    x:  -38, fall: "l",  dur: 3.6, delay: 1.1  },
+  { type: "cumin",     x:  -65, fall: "l",  dur: 3.4, delay: 3.5  },
+  { type: "saffron",   x:  -12, fall: "c",  dur: 4.3, delay: 0.3  },
+  { type: "pepper",    x:    8, fall: "c",  dur: 3.9, delay: 1.9  },
+  { type: "turmeric",  x:   -5, fall: "c",  dur: 4.6, delay: 3.3  },
+  { type: "coriander", x:   18, fall: "c",  dur: 3.7, delay: 0.8  },
+  { type: "cardamom",  x:   35, fall: "r",  dur: 4.4, delay: 2.0  },
+  { type: "chili",     x:   55, fall: "r",  dur: 3.6, delay: 1.3  },
+  { type: "pepper",    x:   75, fall: "r",  dur: 4.2, delay: 0.6  },
+  { type: "cumin",     x:   60, fall: "r",  dur: 3.5, delay: 2.8  },
+  { type: "coriander", x:   98, fall: "rr", dur: 4.0, delay: 0.5  },
+  { type: "pepper",    x:  120, fall: "rr", dur: 3.8, delay: 2.1  },
+  { type: "saffron",   x:  148, fall: "rr", dur: 4.7, delay: 1.1  },
+  { type: "turmeric",  x:  110, fall: "rr", dur: 3.5, delay: 3.6  },
+  { type: "cardamom",  x:   88, fall: "r",  dur: 4.9, delay: 1.7  },
+  { type: "chili",     x: -112, fall: "ll", dur: 3.6, delay: 0.4  },
+  { type: "coriander", x:  -45, fall: "l",  dur: 4.3, delay: 1.4  },
+  { type: "pepper",    x:   28, fall: "c",  dur: 3.8, delay: 2.4  },
 ];
 
 export function FallingSpices() {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  /* Subtle parallax: slow the fall rate on scroll */
-  useEffect(() => {
-    let ticking = false;
-    const onScroll = () => {
-      if (!ticking && containerRef.current) {
-        window.requestAnimationFrame(() => {
-          if (containerRef.current) {
-            const y = window.scrollY * 0.12;
-            containerRef.current.style.transform = `translateY(${y}px)`;
-          }
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
     <div
-      ref={containerRef}
-      className="absolute inset-0 overflow-hidden pointer-events-none"
+      style={{ position: "absolute", inset: 0, pointerEvents: "none", overflow: "hidden" }}
       aria-hidden="true"
     >
-      {PARTICLES.map((p, i) => {
-        const shape = SHAPES[p.shapeIdx];
-        return (
-          <div
-            key={i}
-            className="absolute top-0"
-            style={{
-              left: p.left,
-              animation: `spice-fall ${p.duration}s ${p.delay}s infinite linear`,
-              opacity: 0,
-              willChange: "transform",
-            }}
-          >
-            <svg
-              width={p.size}
-              height={p.size}
-              viewBox="0 0 24 24"
-              style={{
-                animation: `spice-sway ${p.swayDuration}s ${p.swayDelay}s infinite ease-in-out`,
-                filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.4))",
-              }}
-            >
-              <path
-                d={shape.d}
-                fill={shape.fill}
-                stroke={shape.stroke}
-                strokeWidth="0.5"
-              />
-            </svg>
-          </div>
-        );
-      })}
+      {PARTICLES.map((p, i) => (
+        <div
+          key={i}
+          style={{
+            position: "absolute",
+            left: "50%",
+            top: 0,
+            marginLeft: p.x,
+            animation: `fall-${p.fall} ${p.dur}s ease-in infinite ${p.delay}s`,
+          }}
+        >
+          <SpiceSVG type={p.type} />
+        </div>
+      ))}
     </div>
   );
 }

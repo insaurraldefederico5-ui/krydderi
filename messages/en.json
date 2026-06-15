@@ -23,6 +23,7 @@
     },
     "valueProps": {
       "title": "Why Krydderi?",
+      "subtitle": "What sets us apart for professional kitchens",
       "direct": {
         "title": "Direct from source",
         "description": "We cut out the German and Dutch middleman. Cardamom from Guatemala, turmeric from India — bought directly from co-ops with traceable certificates."
@@ -46,6 +47,8 @@
       "title": "Our range"
     },
     "categories": {
+      "subtitle": "Everything in stock — cleared and ready to deliver",
+      "browse": "Browse range",
       "whole_spices": "Whole Spices",
       "ground_spices": "Ground Spices",
       "herbs": "Herbs",

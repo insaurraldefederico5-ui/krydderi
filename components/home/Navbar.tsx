@@ -6,8 +6,8 @@ import { Link, usePathname } from "@/i18n/navigation";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const nav = useTranslations("nav");
-  const locale = useLocale();
+  const nav     = useTranslations("nav");
+  const locale  = useLocale();
   const pathname = usePathname();
 
   useEffect(() => {
@@ -16,67 +16,81 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const linkColor = scrolled ? "#1A160F" : "rgba(26,22,15,0.75)";
+
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-400"
       style={{
-        background: scrolled ? "rgba(13, 6, 3, 0.92)" : "transparent",
+        background: scrolled ? "rgba(247,244,238,0.94)" : "transparent",
         backdropFilter: scrolled ? "blur(12px)" : "none",
-        borderBottom: scrolled ? "1px solid rgba(196,128,10,0.15)" : "none",
+        borderBottom: scrolled ? "1px solid rgba(26,22,15,0.08)" : "none",
       }}
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5 group">
+        <Link href="/">
           <span
-            className="text-xl tracking-widest uppercase font-semibold"
             style={{
-              color: scrolled ? "#e8a020" : "#f5e6c8",
+              fontSize: "1.2rem",
               fontFamily: "var(--font-playfair), serif",
-              letterSpacing: "0.18em",
+              fontWeight: 900,
+              letterSpacing: "0.15em",
+              textTransform: "uppercase",
+              color: "#B57422",
             }}
           >
             Krydderi
           </span>
         </Link>
 
-        {/* Desktop nav */}
+        {/* Desktop nav links */}
         <nav className="hidden md:flex items-center gap-8">
           {[
             { label: nav("range"),   href: "#sortiment" },
-            { label: nav("about"),   href: "#om-os" },
-            { label: nav("contact"), href: "#kontakt" },
+            { label: nav("about"),   href: "#om-os"     },
+            { label: nav("contact"), href: "#kontakt"   },
           ].map(({ label, href }) => (
             <a
               key={href}
               href={href}
-              className="text-sm font-medium transition-colors duration-200"
-              style={{ color: scrolled ? "#c4a882" : "rgba(245,230,200,0.75)" }}
-              onMouseEnter={e => ((e.target as HTMLElement).style.color = "#e8a020")}
-              onMouseLeave={e => ((e.target as HTMLElement).style.color = scrolled ? "#c4a882" : "rgba(245,230,200,0.75)")}
+              style={{ fontSize: "0.875rem", fontWeight: 500, color: linkColor, textDecoration: "none" }}
+              onMouseEnter={e => ((e.target as HTMLElement).style.color = "#B57422")}
+              onMouseLeave={e => ((e.target as HTMLElement).style.color = linkColor)}
             >
               {label}
             </a>
           ))}
         </nav>
 
-        {/* Right side: locale toggle + CTAs */}
-        <div className="flex items-center gap-3">
-          {/* Language toggle */}
+        {/* Right: locale toggle + CTAs */}
+        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+
+          {/* DA / EN toggle */}
           <div
-            className="hidden sm:flex items-center rounded-full overflow-hidden text-xs font-semibold select-none"
-            style={{ border: "1px solid rgba(196,128,10,0.30)" }}
+            className="hidden sm:flex"
+            style={{
+              alignItems: "center",
+              borderRadius: 50,
+              overflow: "hidden",
+              border: "1px solid rgba(26,22,15,0.15)",
+              fontSize: "0.72rem",
+              fontWeight: 700,
+              letterSpacing: "0.05em",
+            }}
           >
             {(["da", "en"] as const).map((loc, i) => (
               <Link
                 key={loc}
                 href={pathname}
                 locale={loc}
-                className="px-3 py-1.5 transition-colors duration-200"
                 style={{
-                  background: locale === loc ? "rgba(196,128,10,0.20)" : "transparent",
-                  color: locale === loc ? "#e8a020" : "rgba(245,230,200,0.45)",
-                  borderRight: i === 0 ? "1px solid rgba(196,128,10,0.30)" : undefined,
+                  padding: "5px 11px",
+                  background: locale === loc ? "#1A160F" : "transparent",
+                  color:      locale === loc ? "#F7F4EE" : "rgba(26,22,15,0.45)",
+                  borderRight: i === 0 ? "1px solid rgba(26,22,15,0.12)" : undefined,
+                  textDecoration: "none",
                 }}
               >
                 {loc.toUpperCase()}
@@ -87,18 +101,16 @@ export function Navbar() {
           {/* Log in */}
           <Link
             href="/login"
-            className="hidden sm:inline-flex items-center text-sm font-medium px-4 py-2 rounded-full transition-all duration-200"
+            className="hidden sm:inline-flex"
             style={{
-              color: scrolled ? "#c4a882" : "rgba(245,230,200,0.85)",
-              border: "1px solid rgba(196,128,10,0.35)",
-            }}
-            onMouseEnter={e => {
-              (e.currentTarget as HTMLElement).style.background = "rgba(196,128,10,0.15)";
-              (e.currentTarget as HTMLElement).style.borderColor = "#c4800a";
-            }}
-            onMouseLeave={e => {
-              (e.currentTarget as HTMLElement).style.background = "";
-              (e.currentTarget as HTMLElement).style.borderColor = "rgba(196,128,10,0.35)";
+              alignItems: "center",
+              fontSize: "0.875rem",
+              fontWeight: 500,
+              padding: "0.45rem 1rem",
+              borderRadius: 50,
+              border: "1px solid rgba(26,22,15,0.20)",
+              color: "#1A160F",
+              textDecoration: "none",
             }}
           >
             {nav("login")}
@@ -107,13 +119,17 @@ export function Navbar() {
           {/* Request account CTA */}
           <a
             href="#kontakt"
-            className="inline-flex items-center text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-200"
             style={{
-              background: "linear-gradient(135deg, #c4800a 0%, #e8a020 100%)",
-              color: "#0d0603",
+              display: "inline-flex",
+              alignItems: "center",
+              fontSize: "0.875rem",
+              fontWeight: 600,
+              padding: "0.5rem 1.15rem",
+              borderRadius: 50,
+              background: "#1A160F",
+              color: "#F7F4EE",
+              textDecoration: "none",
             }}
-            onMouseEnter={e => ((e.currentTarget as HTMLElement).style.opacity = "0.88")}
-            onMouseLeave={e => ((e.currentTarget as HTMLElement).style.opacity = "1")}
           >
             {nav("requestAccount")}
           </a>

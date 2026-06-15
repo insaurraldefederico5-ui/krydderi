@@ -32,98 +32,102 @@
   --radius-xl: calc(var(--radius) * 1.4);
 }
 
-/* ─── Krydderi brand tokens ──────────────────────────────────────────────── */
+/* ─── Krydderi brand tokens — light editorial palette ─────────────────── */
 :root {
-  --background: oklch(0.983 0.007 80);
-  --foreground: oklch(0.16 0.025 48);
-  --card: oklch(1 0.003 78);
-  --card-foreground: oklch(0.16 0.025 48);
-  --popover: oklch(1 0.003 78);
-  --popover-foreground: oklch(0.16 0.025 48);
-  --primary: oklch(0.36 0.095 52);
-  --primary-foreground: oklch(0.985 0.004 80);
-  --secondary: oklch(0.93 0.016 74);
-  --secondary-foreground: oklch(0.36 0.095 52);
-  --muted: oklch(0.93 0.01 80);
-  --muted-foreground: oklch(0.52 0.032 58);
-  --accent: oklch(0.86 0.065 74);
-  --accent-foreground: oklch(0.22 0.055 48);
-  --destructive: oklch(0.58 0.22 27);
-  --border: oklch(0.87 0.016 74);
-  --input: oklch(0.87 0.016 74);
-  --ring: oklch(0.55 0.07 58);
-  --radius: 0.5rem;
+  --background:           #F7F4EE;
+  --foreground:           #1A160F;
+  --card:                 #F1EBE0;
+  --card-foreground:      #1A160F;
+  --popover:              #F7F4EE;
+  --popover-foreground:   #1A160F;
+  --primary:              #B57422;
+  --primary-foreground:   #F7F4EE;
+  --secondary:            #EDE8DF;
+  --secondary-foreground: #1A160F;
+  --muted:                #EDE8DF;
+  --muted-foreground:     #6B6150;
+  --accent:               #C88020;
+  --accent-foreground:    #1A160F;
+  --destructive:          #B82A20;
+  --border:               rgba(26,22,15,0.10);
+  --input:                rgba(26,22,15,0.10);
+  --ring:                 #B57422;
+  --radius:               0.5rem;
 
-  /* spice palette for sections */
-  --spice-espresso:  #0d0603;
-  --spice-bark:      #2d1507;
-  --spice-amber:     #c4800a;
-  --spice-turmeric:  #e8a020;
-  --spice-chili:     #8b2e16;
-  --spice-sage:      #5a6e4a;
-  --spice-pepper:    #1e1412;
+  /* shorthand palette */
+  --kr-bg:      #F7F4EE;
+  --kr-bg-alt:  #EDE9E0;
+  --kr-bg-dark: #0E0B07;
+  --kr-fg:      #1A160F;
+  --kr-muted:   #6B6150;
+  --kr-amber:   #B57422;
+  --kr-sage:    #445E38;
+  --kr-chili:   #A82010;
 }
 
-/* ─── Animations ────────────────────────────────────────────────────────── */
+/* ─── Animations ──────────────────────────────────────────────────────── */
 
-/* Spice falls from top to bottom of viewport */
-@keyframes spice-fall {
-  0%   { transform: translateY(-120px) rotate(0deg);   opacity: 0;   }
-  6%   { opacity: 0.75; }
-  88%  { opacity: 0.45; }
-  100% { transform: translateY(110vh) rotate(540deg);  opacity: 0;   }
-}
-
-/* Gentle left-right sway (applied to inner element, composing with fall) */
-@keyframes spice-sway {
-  0%,100% { transform: translateX(0px)  rotate(0deg); }
-  25%     { transform: translateX(22px) rotate(12deg); }
-  75%     { transform: translateX(-18px) rotate(-8deg); }
-}
-
-/* Reveal on scroll helper (toggled by IntersectionObserver) */
-@keyframes fade-up {
-  from { opacity: 0; transform: translateY(40px); }
+@keyframes hero-in {
+  from { opacity: 0; transform: translateY(22px); }
   to   { opacity: 1; transform: translateY(0);    }
 }
 
-/* Hero text entrance */
-@keyframes hero-in {
-  from { opacity: 0; transform: translateY(24px) scale(0.98); }
-  to   { opacity: 1; transform: translateY(0)    scale(1);    }
+/* 5 fall variants — different lateral drift + rotation */
+@keyframes fall-ll {
+  0%   { opacity: 0;   transform: translate(  0px,  -10px) rotate(  0deg); }
+  8%   { opacity: 0.9; }
+  85%  { opacity: 0.6; }
+  100% { opacity: 0;   transform: translate(-130px, 960px) rotate(-300deg); }
+}
+@keyframes fall-l {
+  0%   { opacity: 0;   transform: translate(  0px,  -10px) rotate(  0deg); }
+  8%   { opacity: 0.9; }
+  85%  { opacity: 0.6; }
+  100% { opacity: 0;   transform: translate( -55px, 960px) rotate(-210deg); }
+}
+@keyframes fall-c {
+  0%   { opacity: 0;   transform: translate(  0px,  -10px) rotate(  0deg); }
+  8%   { opacity: 0.9; }
+  85%  { opacity: 0.6; }
+  100% { opacity: 0;   transform: translate(   8px, 960px) rotate( 210deg); }
+}
+@keyframes fall-r {
+  0%   { opacity: 0;   transform: translate(  0px,  -10px) rotate(  0deg); }
+  8%   { opacity: 0.9; }
+  85%  { opacity: 0.6; }
+  100% { opacity: 0;   transform: translate(  55px, 960px) rotate( 210deg); }
+}
+@keyframes fall-rr {
+  0%   { opacity: 0;   transform: translate(  0px,  -10px) rotate(  0deg); }
+  8%   { opacity: 0.9; }
+  85%  { opacity: 0.6; }
+  100% { opacity: 0;   transform: translate( 130px, 960px) rotate( 300deg); }
 }
 
-/* Horizontal marquee */
+/* Sticky spice gentle bob */
+@keyframes spice-bob {
+  0%,100% { transform: translateY(0px)   rotate(-3deg); }
+  50%     { transform: translateY(-10px) rotate( 3deg); }
+}
+
+/* Horizontal product ticker */
 @keyframes marquee {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
 }
 
-/* Slow float for decorative elements */
-@keyframes float {
-  0%,100% { transform: translateY(0px)   rotate(0deg); }
-  33%     { transform: translateY(-14px) rotate(4deg); }
-  66%     { transform: translateY(8px)   rotate(-3deg); }
-}
-
-/* Pulse glow */
-@keyframes glow-pulse {
-  0%,100% { opacity: 0.4; }
-  50%     { opacity: 0.8; }
-}
-
-/* ─── Utility classes ───────────────────────────────────────────────────── */
+/* ─── Utility classes ─────────────────────────────────────────────────── */
 
 .hero-headline {
   font-family: var(--font-heading), Georgia, serif;
-  font-weight: 700;
-  line-height: 1.08;
+  font-weight: 900;
+  line-height: 0.9;
   letter-spacing: -0.03em;
 }
 
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(28px);
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
 .reveal.visible {
@@ -132,14 +136,14 @@
 }
 
 .marquee-track {
-  animation: marquee 28s linear infinite;
+  animation: marquee 32s linear infinite;
   will-change: transform;
 }
 .marquee-track:hover {
   animation-play-state: paused;
 }
 
-/* ─── Base ──────────────────────────────────────────────────────────────── */
+/* ─── Base ─────────────────────────────────────────────────────────────── */
 
 @layer base {
   * {

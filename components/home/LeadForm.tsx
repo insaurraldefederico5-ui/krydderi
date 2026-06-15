@@ -17,9 +17,9 @@ export function LeadForm() {
   }
 
   const inputStyle: React.CSSProperties = {
-    background: "rgba(245,230,200,0.05)",
-    border: "1px solid rgba(245,230,200,0.12)",
-    color: "#f5e6c8",
+    background: "#F7F4EE",
+    border: "1px solid rgba(26,22,15,0.14)",
+    color: "#1A160F",
     borderRadius: 10,
     padding: "12px 16px",
     fontSize: "0.875rem",
@@ -31,32 +31,32 @@ export function LeadForm() {
   const labelStyle: React.CSSProperties = {
     display: "block",
     marginBottom: 6,
-    fontSize: "0.75rem",
-    fontWeight: 600,
-    letterSpacing: "0.06em",
+    fontSize: "0.7rem",
+    fontWeight: 700,
+    letterSpacing: "0.08em",
     textTransform: "uppercase",
-    color: "rgba(245,230,200,0.5)",
+    color: "rgba(26,22,15,0.5)",
   };
 
   if (submitted) {
     return (
-      <section id="kontakt" className="py-24 px-5" style={{ background: "#0d0603" }}>
+      <section id="kontakt" className="py-24 px-5" style={{ background: "#F7F4EE" }}>
         <div className="max-w-xl mx-auto text-center">
           <div
             className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
-            style={{ background: "rgba(107,142,90,0.15)", border: "1px solid #6B8E5A" }}
+            style={{ background: "rgba(68,94,56,0.10)", border: "1px solid #445E38" }}
           >
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6B8E5A" strokeWidth="2">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#445E38" strokeWidth="2.2">
               <path d="M20 6L9 17l-5-5"/>
             </svg>
           </div>
           <h3
             className="text-2xl font-bold mb-3"
-            style={{ fontFamily: "var(--font-playfair), serif", color: "#f5e6c8" }}
+            style={{ fontFamily: "var(--font-playfair), serif", color: "#1A160F" }}
           >
             {t("success")}
           </h3>
-          <p className="text-sm" style={{ color: "rgba(245,230,200,0.5)" }}>
+          <p className="text-sm" style={{ color: "#6B6150" }}>
             {t("successBody")}
           </p>
         </div>
@@ -65,20 +65,20 @@ export function LeadForm() {
   }
 
   return (
-    <section id="kontakt" className="py-24 px-5" style={{ background: "#0d0603" }}>
+    <section id="kontakt" className="py-24 px-5" style={{ background: "#F7F4EE" }}>
       <div className="max-w-2xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12 reveal">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] mb-4" style={{ color: "#c4800a" }}>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] mb-4" style={{ color: "#B57422" }}>
             Kom i gang
           </p>
           <h2
             className="text-3xl sm:text-4xl font-bold mb-4"
-            style={{ fontFamily: "var(--font-playfair), serif", color: "#f5e6c8" }}
+            style={{ fontFamily: "var(--font-playfair), serif", color: "#1A160F" }}
           >
             {t("title")}
           </h2>
-          <p className="text-sm" style={{ color: "rgba(245,230,200,0.5)" }}>
+          <p className="text-sm" style={{ color: "#6B6150" }}>
             {t("subtitle")}
           </p>
         </div>
@@ -86,95 +86,73 @@ export function LeadForm() {
         <form
           onSubmit={handleSubmit}
           className="rounded-2xl p-8 sm:p-10 reveal"
-          style={{
-            background: "rgba(245,230,200,0.03)",
-            border: "1px solid rgba(245,230,200,0.08)",
-          }}
+          style={{ background: "#EDE9E0", border: "1px solid rgba(26,22,15,0.08)" }}
         >
           <div className="grid sm:grid-cols-2 gap-5">
-            {/* Business name */}
             <div className="sm:col-span-2">
               <label style={labelStyle}>{t("businessName")}</label>
               <input
-                required
-                name="business_name"
-                type="text"
+                required name="business_name" type="text"
                 placeholder="Juno The Bakery ApS"
                 style={inputStyle}
-                onFocus={e => (e.target.style.borderColor = "#c4800a")}
-                onBlur={e => (e.target.style.borderColor = "rgba(245,230,200,0.12)")}
+                onFocus={e => (e.target.style.borderColor = "#B57422")}
+                onBlur={e  => (e.target.style.borderColor = "rgba(26,22,15,0.14)")}
               />
             </div>
-
-            {/* Contact name */}
             <div>
               <label style={labelStyle}>{t("contactName")}</label>
               <input
-                required
-                name="contact_name"
-                type="text"
+                required name="contact_name" type="text"
                 placeholder="Emil Hansen"
                 style={inputStyle}
-                onFocus={e => (e.target.style.borderColor = "#c4800a")}
-                onBlur={e => (e.target.style.borderColor = "rgba(245,230,200,0.12)")}
+                onFocus={e => (e.target.style.borderColor = "#B57422")}
+                onBlur={e  => (e.target.style.borderColor = "rgba(26,22,15,0.14)")}
               />
             </div>
-
-            {/* Email */}
             <div>
               <label style={labelStyle}>{t("email")}</label>
               <input
-                required
-                name="email"
-                type="email"
+                required name="email" type="email"
                 placeholder="emil@bakery.dk"
                 style={inputStyle}
-                onFocus={e => (e.target.style.borderColor = "#c4800a")}
-                onBlur={e => (e.target.style.borderColor = "rgba(245,230,200,0.12)")}
+                onFocus={e => (e.target.style.borderColor = "#B57422")}
+                onBlur={e  => (e.target.style.borderColor = "rgba(26,22,15,0.14)")}
               />
             </div>
-
-            {/* Phone */}
             <div>
               <label style={labelStyle}>{t("phone")}</label>
               <input
-                name="phone"
-                type="tel"
+                name="phone" type="tel"
                 placeholder="+45 33 25 56 77"
                 style={inputStyle}
-                onFocus={e => (e.target.style.borderColor = "#c4800a")}
-                onBlur={e => (e.target.style.borderColor = "rgba(245,230,200,0.12)")}
+                onFocus={e => (e.target.style.borderColor = "#B57422")}
+                onBlur={e  => (e.target.style.borderColor = "rgba(26,22,15,0.14)")}
               />
             </div>
-
-            {/* Segment */}
             <div>
               <label style={labelStyle}>{t("segment")}</label>
               <select
                 name="segment"
                 style={{ ...inputStyle, appearance: "none", cursor: "pointer" }}
-                onFocus={e => (e.target.style.borderColor = "#c4800a")}
-                onBlur={e => (e.target.style.borderColor = "rgba(245,230,200,0.12)")}
+                onFocus={e => (e.target.style.borderColor = "#B57422")}
+                onBlur={e  => (e.target.style.borderColor = "rgba(26,22,15,0.14)")}
               >
-                <option value="" style={{ background: "#1a0a02" }}>Vælg type…</option>
-                {(["bakery", "restaurant", "manufacturer", "health_food", "distributor"] as const).map(s => (
-                  <option key={s} value={s} style={{ background: "#1a0a02" }}>
+                <option value="" style={{ background: "#F7F4EE" }}>Vælg type…</option>
+                {(["bakery","restaurant","manufacturer","health_food","distributor"] as const).map(s => (
+                  <option key={s} value={s} style={{ background: "#F7F4EE" }}>
                     {t(`segments.${s}`)}
                   </option>
                 ))}
               </select>
             </div>
-
-            {/* Message */}
             <div className="sm:col-span-2">
               <label style={labelStyle}>{t("message")}</label>
               <textarea
-                name="message"
-                rows={4}
+                name="message" rows={4}
                 placeholder="Ca. 20 kg kardemomme og 10 kg kanel om måneden…"
                 style={{ ...inputStyle, resize: "vertical" }}
-                onFocus={e => (e.target.style.borderColor = "#c4800a")}
-                onBlur={e => (e.target.style.borderColor = "rgba(245,230,200,0.12)")}
+                onFocus={e => (e.target.style.borderColor = "#B57422")}
+                onBlur={e  => (e.target.style.borderColor = "rgba(26,22,15,0.14)")}
               />
             </div>
           </div>
@@ -183,16 +161,12 @@ export function LeadForm() {
             type="submit"
             disabled={loading}
             className="mt-8 w-full py-4 rounded-full text-sm font-semibold transition-all duration-300 disabled:opacity-60"
-            style={{
-              background: "linear-gradient(135deg, #c4800a 0%, #e8a020 100%)",
-              color: "#0d0603",
-              boxShadow: loading ? "none" : "0 0 28px rgba(196,128,10,0.25)",
-            }}
+            style={{ background: "#1A160F", color: "#F7F4EE" }}
           >
             {loading ? t("sending") : t("submit")}
           </button>
 
-          <p className="mt-4 text-center text-xs" style={{ color: "rgba(245,230,200,0.3)" }}>
+          <p className="mt-4 text-center text-xs" style={{ color: "rgba(26,22,15,0.35)" }}>
             {t("disclaimer")}
           </p>
         </form>
